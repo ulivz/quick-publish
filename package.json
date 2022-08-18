@@ -20,7 +20,9 @@
   "scripts": {
     "dev": "npm run build -- -w",
     "build": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "cov": "jest --coverage"
   },
   "dependencies": {
     "cac": "^6.7.3",
