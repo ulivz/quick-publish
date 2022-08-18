@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "module": "commonjs",
+    "outDir": "./lib",
+    "typeRoots": [
+      "../../node_modules/@types"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
