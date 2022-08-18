@@ -26,7 +26,7 @@
     "release": "publish"
   },
   "dependencies": {
-    "@nomadland/publish": "0.1.0",
+    "@nomadland/publish": "0.1.1",
     "cac": "^6.7.3",
     "conventional-changelog-cli": "^2.1.1",
     "execa": "^4.1.0",
