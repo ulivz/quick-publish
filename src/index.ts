@@ -45,11 +45,11 @@ export async function publish(opts: Publish.IOptions = {}) {
     await exec(COMMANDS.changelog());
     await exec(COMMANDS.npmPublish(tag));
     await exec(COMMANDS.gitAdd("CHANGELOG.md"));
-    await exec(COMMANDS.gitCommit(`chore(all): changelog ${version}`));
+    await exec(COMMANDS.gitCommit(`chore: changelog ${version}`));
     if (opts.depcost) {
       await exec(COMMANDS.depcost());
       await exec(COMMANDS.gitAdd("DEPCOST.md"));
-      await exec(COMMANDS.gitCommit(`chore(all): DEPCOST.md ${version}`));
+      await exec(COMMANDS.gitCommit(`chore: DEPCOST.md ${version}`));
     }
     if (opts.push) {
       await exec(COMMANDS.gitPush());
