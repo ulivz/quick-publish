@@ -1,7 +1,7 @@
 {
   "name": "@nomadland/publish",
   "description": "Shipped a standard `npm publish` workflow with one click.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
