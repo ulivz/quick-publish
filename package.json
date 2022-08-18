@@ -22,9 +22,11 @@
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "test": "jest",
-    "cov": "jest --coverage"
+    "cov": "jest --coverage",
+    "release": "publish"
   },
   "dependencies": {
+    "@nomadland/publish": "0.1.0",
     "cac": "^6.7.3",
     "conventional-changelog-cli": "^2.1.1",
     "execa": "^4.1.0",
