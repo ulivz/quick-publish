@@ -30,9 +30,9 @@ export async function publish(opts: Publish.IOptions = {}) {
    * 2. Double check.
    */
   const { gitAddAllFiles, continueTo } = await inquirer.prompt<{
-    addAll: boolean
+    gitAddAllFiles: boolean
     continueTo: boolean
-  }>(
+  }>([
     {
       type: 'confirm',
       name: 'gitAddAllFiles',
@@ -42,8 +42,8 @@ export async function publish(opts: Publish.IOptions = {}) {
       type: 'confirm',
       name: 'continueTo',
       message: `Continue to publish \`${version}\` with tag \`${tag}\`?`,
-    }
-  )
+    },
+  ])
 
   /**
    * 3. Publish workflow.
