@@ -1,3 +1,7 @@
+# [0.3.0](https://github.com/ulivz/publish/compare/v0.1.1...v0.3.0) (2022-11-03)
+
+
+
 ## [0.1.1](https://github.com/ulivz/publish/compare/v0.1.0...v0.1.1) (2022-08-18)
 
 
