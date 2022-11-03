@@ -1,6 +1,6 @@
-# @primajs/publish
+# @insx/publish
 
-[![npm version](https://badgen.net/npm/v/@primajs/publish)](https://npm.im/@primajs/publish) 
+[![npm version](https://badgen.net/npm/v/@insx/publish)](https://npm.im/@insx/publish) 
 
 Shipped a standard `npm publish` workflow with one click.
 
@@ -19,8 +19,8 @@ As a maintainer for a large number of NPM packages, it will be very cumbersome i
 ## Install
 
 ```bash
-npm i @primajs/publish -g      # Global installation
-npm i @primajs/publish -D      # Local installation
+npm i @insx/publish -g      # Global installation
+npm i @insx/publish -D      # Local installation
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ Options:
 
 ## Credits
 
-`@primajs/publish` wouldn't exist without the inspirations from following projects:
+`@insx/publish` wouldn't exist without the inspirations from following projects:
 
 - [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)
 

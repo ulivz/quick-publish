@@ -1,5 +1,5 @@
 {
-  "name": "@primajs/publish",
+  "name": "@insx/publish",
   "description": "Shipped a standard `npm publish` workflow with one click.",
   "version": "0.3.0",
   "publishConfig": {
@@ -26,7 +26,7 @@
     "release": "publish"
   },
   "dependencies": {
-    "@primajs/publish": "0.1.1",
+    "@insx/publish": "0.1.1",
     "cac": "^6.7.3",
     "conventional-changelog-cli": "^2.1.1",
     "execa": "^4.1.0",
