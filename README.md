@@ -1,6 +1,6 @@
-# @nomadland/publish
+# @primajs/publish
 
-[![npm version](https://badgen.net/npm/v/@nomadland/publish)](https://npm.im/@nomadland/publish) 
+[![npm version](https://badgen.net/npm/v/@primajs/publish)](https://npm.im/@primajs/publish) 
 
 Shipped a standard `npm publish` workflow with one click.
 
@@ -19,8 +19,8 @@ As a maintainer for a large number of NPM packages, it will be very cumbersome i
 ## Install
 
 ```bash
-npm i @nomadland/publish -g      # Global installation
-npm i @nomadland/publish -D      # Local installation
+npm i @primajs/publish -g      # Global installation
+npm i @primajs/publish -D      # Local installation
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ Options:
 
 ## Credits
 
-`@nomadland/publish` wouldn't exist without the inspirations from following projects:
+`@primajs/publish` wouldn't exist without the inspirations from following projects:
 
 - [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)
 
