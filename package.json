@@ -1,7 +1,7 @@
 {
   "name": "@primajs/publish",
   "description": "Shipped a standard `npm publish` workflow with one click.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
