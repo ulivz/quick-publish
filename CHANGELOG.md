@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/ulivz/publish/compare/v0.4.0...v0.4.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* No matching version found for @insx/publish@0.1.1 ([dd89084](https://github.com/ulivz/publish/commit/dd890847db820b9b16b3cbebfad55083da3a5500))
+
+
+
 # [0.4.0](https://github.com/ulivz/publish/compare/v0.3.0...v0.4.0) (2022-11-03)
 
 
