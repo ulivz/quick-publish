@@ -1,7 +1,7 @@
 {
   "name": "@insx/publish",
   "description": "Shipped a standard `npm publish` workflow with one click.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
