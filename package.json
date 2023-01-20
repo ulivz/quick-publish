@@ -7,7 +7,7 @@
     "access": "public"
   },
   "bin": {
-    "publish": "bin/cli.js"
+    "quick-publish": "bin/cli.js"
   },
   "keywords": [
     "workflow",
