@@ -24,7 +24,7 @@
     "prepublishOnly": "npm run build",
     "test": "jest",
     "cov": "jest --coverage",
-    "release": "publish"
+    "release": "quick-publish"
   },
   "dependencies": {
     "cac": "6.7.3",
