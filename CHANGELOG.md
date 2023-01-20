@@ -1,3 +1,18 @@
+# [0.5.0](https://github.com/ulivz/publish/compare/77f540cd125766bcb7e16fcce6cabf771c3c0113...v0.5.0) (2023-01-20)
+
+
+### Bug Fixes
+
+* No matching version found for @insx/publish@0.1.1 ([dd89084](https://github.com/ulivz/publish/commit/dd890847db820b9b16b3cbebfad55083da3a5500))
+
+
+### Features
+
+* init ([77f540c](https://github.com/ulivz/publish/commit/77f540cd125766bcb7e16fcce6cabf771c3c0113))
+* remove scope from commit message ([9cebbaa](https://github.com/ulivz/publish/commit/9cebbaa936d50498542cefafe3e2e16216572ab7))
+
+
+
 ## [0.4.1](https://github.com/ulivz/publish/compare/v0.4.0...v0.4.1) (2022-11-09)
 
 
