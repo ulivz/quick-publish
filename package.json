@@ -1,7 +1,7 @@
 {
   "name": "quick-publish",
   "description": "Shipped a standard `npm publish` workflow with one click.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
