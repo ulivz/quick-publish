@@ -31,9 +31,7 @@
     "conventional-changelog-cli": "2.2.2",
     "execa": "6.1.0",
     "inquirer": "9.1.4",
-    "meow": "11.0.0",
-    "semver": "7.3.8",
-    "tslib": "2.4.1"
+    "semver": "7.3.8"
   },
   "devDependencies": {
     "@types/inquirer": "9.0.3",
