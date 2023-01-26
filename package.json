@@ -20,10 +20,10 @@
   "scripts": {
     "bootstrap": "pnpm i --prefer-offline",
     "dev": "npm run build -- -w",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "jest",
-    "cov": "jest --coverage",
+    "lint": "eslint src --ext js,ts,tsx",
+    "lint:fix": "npm run lint -- --fix",
     "release": "quick-publish"
   },
   "dependencies": {
@@ -36,11 +36,12 @@
     "tslib": "2.3.1"
   },
   "devDependencies": {
+    "eslint-config-typescript-library": "0.2.4",
+    "eslint": "8.32.0",
     "quick-publish": "0.6.0",
     "@types/inquirer": "8.1.2",
     "@types/node": "14.14.39",
     "@types/semver": "7.3.8",
-    "eslint": "7.32.0",
     "typescript": "4.5.2"
   },
   "files": [

@@ -1,7 +1,7 @@
 /**
  * Module dependencies
  */
-import execa from "execa";
+import execa from 'execa';
 
 /**
  * Execute a inline command.
@@ -10,10 +10,10 @@ import execa from "execa";
  * @returns
  */
 export function exec(command: string) {
-  const splits = command.split(" ");
+  const splits = command.split(' ');
   return execa(
     splits[0],
-    splits.slice(1).map((v) => decodeURIComponent(v)),
-    { stdio: "inherit" }
+    splits.slice(1).map(v => decodeURIComponent(v)),
+    { stdio: 'inherit' },
   );
 }

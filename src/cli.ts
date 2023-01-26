@@ -1,8 +1,8 @@
 /**
  * Module dependencies
  */
-import CAC from "cac";
-import { publish } from "./index";
+import CAC from 'cac';
+import { publish } from './index';
 
 /**
  * Bootstrap publish cli.
@@ -12,13 +12,13 @@ export function bootstrapCli() {
   const pkg = require('../package.json');
 
   cli
-    .command("", pkg.description)
-    .option("--depcost", "Generate or update `DEPCOST.md`, defaults to `false`")
+    .command('', pkg.description)
+    .option('--depcost', 'Generate or update `DEPCOST.md`, defaults to `false`')
     .option(
-      "--push",
-      "Execute git push & tag push to remote git origin, defaults to `true`"
+      '--push',
+      'Execute git push & tag push to remote git origin, defaults to `true`',
     )
-    .action((opts) => {
+    .action(opts => {
       publish(opts);
     });
 

@@ -1,18 +1,18 @@
 /**
  * Module dependencies
  */
-import inquirer from "inquirer";
-import { selectVersionAndTag } from "./select-version";
-import { exec } from "./shared";
-import { COMMANDS } from "./commands";
-import type { Publish } from "./types";
+import inquirer from 'inquirer';
+import { selectVersionAndTag } from './select-version';
+import { exec } from './shared';
+import { COMMANDS } from './commands';
+import type { IOptions } from './types';
 
 /**
  * Release a npm package.
  *
  * Built for standard publish of **single** repository.
  */
-export async function publish(opts: Publish.IOptions = {}) {
+export async function publish(opts: IOptions = {}) {
   opts = {
     depcost: false,
     push: true,
@@ -23,7 +23,7 @@ export async function publish(opts: Publish.IOptions = {}) {
    * 1. Select version and tag.
    */
   const { version, tag } = await selectVersionAndTag(
-    require(`${process.cwd()}/package.json`).version
+    require(`${process.cwd()}/package.json`).version,
   );
 
   /**
@@ -32,8 +32,8 @@ export async function publish(opts: Publish.IOptions = {}) {
   const { continueTo } = await inquirer.prompt<{
     continueTo: boolean;
   }>({
-    type: "confirm",
-    name: "continueTo",
+    type: 'confirm',
+    name: 'continueTo',
     message: `Continue to publish \`${version}\` with tag \`${tag}\`?`,
   });
 
@@ -44,11 +44,11 @@ export async function publish(opts: Publish.IOptions = {}) {
     await exec(COMMANDS.bumpVersion(version));
     await exec(COMMANDS.changelog());
     await exec(COMMANDS.npmPublish(tag));
-    await exec(COMMANDS.gitAdd("CHANGELOG.md"));
+    await exec(COMMANDS.gitAdd('CHANGELOG.md'));
     await exec(COMMANDS.gitCommit(`chore: changelog ${version}`));
     if (opts.depcost) {
       await exec(COMMANDS.depcost());
-      await exec(COMMANDS.gitAdd("DEPCOST.md"));
+      await exec(COMMANDS.gitAdd('DEPCOST.md'));
       await exec(COMMANDS.gitCommit(`chore: DEPCOST.md ${version}`));
     }
     if (opts.push) {
@@ -56,6 +56,6 @@ export async function publish(opts: Publish.IOptions = {}) {
       await exec(COMMANDS.gitPushTag(`v${version}`));
     }
   } else {
-    console.log("Publish cancelled");
+    console.log('Publish cancelled');
   }
 }
