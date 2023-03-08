@@ -1,3 +1,13 @@
+## [0.7.1](https://github.com/ulivz/quick-publish/compare/v0.7.0...v0.7.1) (2023-03-08)
+
+
+### Bug Fixes
+
+* lock `execa` to `5` ([e9d5501](https://github.com/ulivz/quick-publish/commit/e9d55011408995ca85e0a49bb21d56e52970844f))
+* using lower version of inquirer ([991f665](https://github.com/ulivz/quick-publish/commit/991f665160f8c4204e6cac393c9dfaa9b9f733c0))
+
+
+
 # [0.6.0](https://github.com/ulivz/quick-publish/compare/v0.5.0...v0.6.0) (2023-01-20)
 
 
