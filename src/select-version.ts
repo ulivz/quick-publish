@@ -10,6 +10,13 @@ import type { ISelectVersionAndTagResult, VersionCandidate, IPromptAnswers, Rele
  */
 export async function selectVersionAndTag(
   currentVersion: string,
+  opts: {
+    yes?: boolean;
+    dryRun?: boolean;
+    releaseType?: string;
+    version?: string;
+    tag?: string;
+  } = {},
 ): Promise<ISelectVersionAndTagResult> {
   const customItem = { name: 'Custom', value: 'custom' };
 
@@ -54,6 +61,34 @@ export async function selectVersionAndTag(
    */
   function isPreRelease(version: string) {
     return Boolean(semver.prerelease(version));
+  }
+
+  // Handle automated execution
+  if (opts.yes || opts.dryRun) {
+    const releaseType = (opts.releaseType as ReleaseType) || (isPreRelease(currentVersion) ? 'prerelease' : 'patch');
+    let version: string;
+    
+    if (releaseType === 'custom') {
+      if (!opts.version) {
+        throw new Error('--version is required when --release-type=custom');
+      }
+      version = opts.version;
+    } else {
+      version = versionCandidate[releaseType]!;
+    }
+    
+    const npmTags = getNpmTags(version);
+    let tag = opts.tag;
+    if (!tag) {
+      const firstTag = npmTags[0];
+      tag = typeof firstTag === 'string' ? firstTag : firstTag.value;
+    }
+    
+    if (opts.dryRun) {
+      console.log(`[DRY RUN] Would select version: ${version}, tag: ${tag}`);
+    }
+    
+    return { version, tag };
   }
 
   const bumpChoices = releaseTypes.map(b => ({
