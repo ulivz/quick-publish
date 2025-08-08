@@ -23,6 +23,26 @@ export interface IOptions {
    * Execute git push & tag push to remote git origin, defaults to `true`
    */
   push?: boolean;
+  /**
+   * Show what would be executed without actually running commands
+   */
+  dryRun?: boolean;
+  /**
+   * Skip all prompts and use default values for automated execution
+   */
+  yes?: boolean;
+  /**
+   * Release type: patch, minor, major, prerelease, or custom
+   */
+  releaseType?: ReleaseType | CustomReleaseType;
+  /**
+   * Custom version (required when releaseType=custom)
+   */
+  version?: string;
+  /**
+   * NPM tag: latest, next, beta, or custom tag name
+   */
+  tag?: string;
 }
 /**
  * Definition of versions candidate.

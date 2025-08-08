@@ -29,8 +29,10 @@
     "downlevelIteration": true,
     "lib": [
       "es5",
-      "es6"
-    ]
+      "es6",
+      "dom"
+    ],
+    "types": ["node"]
   },
   "include": [
     "src",
